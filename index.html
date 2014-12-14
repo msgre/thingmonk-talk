@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>ThingMonk 2014</title>
+
+        <meta name="description" content="Ohlédnutí za IoT konferencí konanou v prosinci 2014 v Londýně">
+        <meta name="author" content="Michal Valoušek, michal@plovarna.cz">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="plugin/highlight/styles/github.css">
+
+        <style>
+            .reveal a:not(.image),
+            .reveal a {
+                color:#000;
+            }
+            .reveal a:not(.image):hover,
+            .reveal a:hover {
+                color:#ff5850;
+            }
+
+            .reveal section img {
+                background:none;
+            }
+            .reveal .controls div.navigate-left,
+            .reveal .controls div.navigate-left.enabled {
+                border-right-color: #000;
+            }
+            .reveal .controls div.navigate-right,
+            .reveal .controls div.navigate-right.enabled {
+                border-left-color: #000;
+            }
+            .reveal .controls div.navigate-up,
+            .reveal .controls div.navigate-up.enabled {
+                border-bottom-color: #000;
+            }
+            .reveal .controls div.navigate-down,
+            .reveal .controls div.navigate-down.enabled {
+                border-top-color: #000;
+            }
+            .reveal .progress span {
+                background: #000;
+            }
+            .reveal pre {
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+            .reveal h1,
+            .reveal h2,
+            .reveal h3,
+            .reveal h4 {
+                line-height: 1.4em;
+                color:#fff;
+            }
+            .reveal {
+                background-color:#eb2626;
+                color:#fff;
+            }
+        </style>
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+                <section class="noarrow">
+                    <h2>THING MONK 2014</h2>
+                    <h4>IoT konference, Londýn 2014</h4>
+
+                    <p>
+                        <br>
+                        <br>
+                        <small><a href="http://tkalci.cz/">Tkalci na webu</a><br><a href="mailto:michal@plovarna.cz">Michal Valoušek</a> &mdash; <a href="http://twitter.com/msgre">@msgre</a><br><br>
+                            <a href="https://github.com/msgre/thingmonk-talk">https://github.com/msgre/thingmonk-talk</a>
+                        </small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="text-align:left">A meeting of the tribes for people building the Internet of Things</h2>
+                </section>
+
+                <section data-background="img/james.png">
+                    <aside class="notes">
+                        James Governor
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Vystřízlivění</h2>
+                    <aside class="notes">
+                        neni to tak jednoduche -- discovery services, komunikace primo mezi devices, wereables
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Bezpečnost</h2>
+                    <aside class="notes">
+                        co je levne, neni bezpecne
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Standardy</h2>
+                    <aside class="notes">
+                        zlata horecka, malo standardu, nebude jeden kral, MQTT
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Open Source</h2>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2><del>Internet</del> of Things</h2>
+                </section>
+
+                <section>
+                    <h3>Díky za pozornost</h3>
+                </section>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+        <script src="jquery.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: 'simple',
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                        $(document).ready(function(){
+                            $('code').each(function(i, e) {hljs.highlightBlock(e)});
+                        });
+                        //hljs.initHighlightingOnLoad();
+                    } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
